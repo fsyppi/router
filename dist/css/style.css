@@ -1,0 +1,141 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: black;
+	font-family: 'Oswald';
+	font-size: 18px;
+	letter-spacing: 1px;
+	overflow: hidden;
+}
+
+h1 {
+	color: white;
+	font-size: 1.5em;
+	line-height: 2.5em;
+	text-transform: uppercase;
+}
+
+ol {
+	color: white;
+	list-style-position: inside;
+	margin: 25px 0;
+}
+
+li {
+	border: 1px solid gray;
+	border-radius: 3px;
+	margin: 5px 0;
+	padding: 5px 10px;
+}
+
+li:hover {
+	color: white;
+	cursor: move;
+}
+
+.header {
+	background-color: black;
+	padding: 0 25px;
+	width: 100%;
+}
+
+.container {
+	bottom: 0;
+	display: flex;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 67px;
+	width: 100%;
+}
+
+.nav {
+	border-top: 1px dashed #555; 
+	min-width: 300px;
+	overflow: auto;
+	padding: 25px;
+	width: 30%;
+}
+
+.map-container {
+	flex: 1 1 auto;
+	position: relative;
+	width: 100%;
+}
+
+#map {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.draggable {
+	background-color: #333;
+}
+
+.dropzone {
+	border-color: #b51eff;
+}
+
+.button {
+	border: 0;
+	float: right;
+	outline: none;
+}
+
+.button:before {
+	color: #8a0000;
+	content: "\2716";
+}
+
+.button:hover:before {
+	color: red;
+	cursor: pointer;
+}
+
+input[type="text"] {
+	background-color: #333;
+	border: none;
+	border-radius: 3px;
+	color: gray;
+	font: 1em "Oswald";
+	padding: 8px;
+	outline: none;
+	width: 100%;
+}
+
+input[type="text"]:focus {
+	background-color: #333;
+	outline: 1px solid #b51eff;
+	color: white;
+}
+
+@media (max-width: 960px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.map-container {
+		min-height: 100vh;
+	}
+	
+	.nav {
+		width: 100%;
+		overflow: visible;
+	}
+
+	body {
+		overflow-y: auto;
+	}
+}
